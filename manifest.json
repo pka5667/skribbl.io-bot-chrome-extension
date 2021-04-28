@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Skribble.io",
+    "description": "This extension is intended to be used for the website, skribbl.io. Using a word bank with all of the default possible words for the game, this extension will help you narrow down which words are the solution to each round.",
+    "version": "0.0.1",
+
+    "content_scripts": [
+        {
+            "matches": ["*skribbl.io*"],
+            "js": ["jquery.min.js", "content.js"]
+        }
+    ],
+
+    "icons": {
+        "128": "icon.jpg"
+    },
+
+    "background":{
+        "scripts": ["background.js"]
+    },
+
+    "browser_action":{
+        "default_icon": "icon.jpg",
+        "default_popup": "index.html"
+    },
+    
+    "permissions": [
+        "activeTab"
+    ]
+}
